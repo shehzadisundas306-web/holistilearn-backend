@@ -1,5 +1,5 @@
 import express from 'express' 
-import { changePassword, forgotPassword, getAllUsers, getMe, getTeachers, getTeachersPaginated, getTeacherSubjects, getUserById, login, logout, registerUser, searchUsers, updateRole, verification, verifyOtp } from '../controllers/userController.js';
+import { changePassword, forgotPassword, getAllUsers, getMe, getTeachers, getTeachersPaginated, getTeacherSubjects, getUserById, login, logout, registerUser, searchUsers, updateProfile, updateRole, verification, verifyOtp } from '../controllers/userController.js';
 import { isAuthenticated, protect } from '../middleware/isAuthenticated.js';
 import { userSchema, validateUser } from '../validators/userValidate.js';
 import passport from 'passport';
@@ -9,6 +9,7 @@ const router = express.Router();
 
 // User routes
 router.get('/me', isAuthenticated, getMe);
+router.put('/profile' , isAuthenticated , updateProfile);
 router.post('/register', validateUser(userSchema), registerUser)
 router.post('/verify', verification)
 router.post('/login', login)
