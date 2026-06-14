@@ -6,7 +6,7 @@ import User from "../models/userModel.js";
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { sendOtpMail } from "../emailVerify/sendOtpMail.js";
-import TeacherProfile from "../models/teacherProfile.js";
+import TeacherProfile from "../models/TeacherProfile.js";
 import NotificationService from "../services/notificationService.js";
 
 export const registerUser = async (req, resp) => {

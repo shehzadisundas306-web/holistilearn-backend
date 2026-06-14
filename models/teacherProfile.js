@@ -91,5 +91,8 @@ teacherProfileSchema.index({ subjects: 1 });
 teacherProfileSchema.index({ 'ratings.average': -1 });
 teacherProfileSchema.index({ isApproved: 1 });
 
-const TeacherProfile = mongoose.model('TeacherProfile', teacherProfileSchema);
+// const TeacherProfile = mongoose.model('TeacherProfile', teacherProfileSchema);
+const TeacherProfile =
+  mongoose.models.TeacherProfile ||
+  mongoose.model("TeacherProfile", teacherProfileSchema);
 export default TeacherProfile;
