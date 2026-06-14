@@ -152,63 +152,7 @@ class AIService {
     try {
       console.log(`\n📝 Generating notes for: ${topic} (${difficulty})`);
       
-//       const prompt = `
-// You are an expert teacher creating detailed study notes.
 
-// Topic: ${topic}
-// Difficulty: ${difficulty}
-
-// ${mentalState ? `Student mental state: ${JSON.stringify(mentalState)}` : ''}
-// ${customInstructions ? `Additional instructions: ${customInstructions}` : ''}
-
-// IMPORTANT RULES:
-// - Return ONLY valid JSON
-// - Do NOT include any text outside JSON
-// - Do NOT use markdown
-// - Do NOT say "Here are your notes"
-// - Make content specific to ${topic}
-// - Explanations must be detailed and practical
-// - Include real-world examples
-
-// STRICT FORMAT (must follow exactly):
-// {
-//   "overview": "2-3 sentence overview explaining why ${topic} matters",
-//   "keyPoints": [
-//     {
-//       "point": "Concept name",
-//       "explanation": "Detailed 2-3 sentence explanation with examples",
-//       "importance": "high|medium|low"
-//     }
-//   ],
-//   "detailedExplanation": {
-//     "sections": [
-//       {
-//         "title": "Core Concepts",
-//         "content": "Detailed explanation with practical examples"
-//       },
-//       {
-//         "title": "Advanced Topics",
-//         "content": "Deeper dive into advanced concepts"
-//       }
-//     ]
-//   },
-//   ${includeExamples ? `"codeExamples": [
-//     {
-//       "title": "Practical Example",
-//       "language": "javascript",
-//       "code": "// Working code example with comments",
-//       "explanation": "Step-by-step explanation of what this code does"
-//     }
-//   ],` : ''}
-//   ${includeQuestions ? `"practiceQuestions": [
-//     {
-//       "question": "Thought-provoking question",
-//       "answer": "Detailed answer with explanation",
-//       "hint": "Helpful hint to guide thinking"
-//     }
-//   ],` : ''}
-//   "summary": "3-4 sentence summary of key takeaways"
-// }`;
 
 
 const prompt = `
