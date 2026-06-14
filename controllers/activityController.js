@@ -1,3 +1,4 @@
+import Activity from '../models/Activity.js';
 export const getRecentActivities = async (req, res) => {
   try {
     const studentId = req.user.id;
@@ -21,7 +22,7 @@ export const getRecentActivities = async (req, res) => {
       (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
     );
 
-    // ✅ FIX: Apply pagination correctly
+    //  FIX: Apply pagination correctly
     const paginatedActivities = sortedActivities.slice(
       parseInt(skip), 
       parseInt(skip) + parseInt(limit)
@@ -133,7 +134,7 @@ export const deleteActivity = async (req, res) => {
   }
 };
 
-// ✅ FIXED: Bulk delete activities
+//  FIXED: Bulk delete activities
 // @desc    Delete multiple activities
 // @route   DELETE /api/activity/bulk-delete
 // @access  Private (Student)
